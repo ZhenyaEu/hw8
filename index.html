@@ -1,0 +1,64 @@
+<body>
+  <script>
+
+function forEach (array, callback) {
+  for (var index = 0; index < array.length; index++) {
+    callback(array.at(index), index, array);
+  }
+}
+
+
+
+function map (array, callback) {
+  var resultArr = [];
+
+  for (var index = 0; index < array.length; index++) {
+    var res = callback(array.at(index), index, array);
+    resultArr.push(res);
+  }
+  return resultArr;
+}
+
+
+
+function filter (array, callback) {
+var resultArr = [];
+
+  for (var index = 0; index < array.length; index++) {
+    var res = callback(array.at(index), index, array);
+
+    if (res) {
+      resultArr.push(array.at(index));
+    }
+  }
+  return resultArr;
+}
+
+
+function findIndex (array, callback) {
+  
+  for (var index = 0; index < array.length; index++) {
+    return
+}
+
+
+
+var testArray = [1,2,3,4,5];
+
+var a = filter (testArray, function(element) {
+  return element % 2 !== 0;
+}  )
+
+console.log(a);
+
+
+
+var b = findIndex (testArray, function(element) {
+  return element % 2 !== 0;
+}  )
+
+console.log(a);
+
+
+  </script>
+</body>
